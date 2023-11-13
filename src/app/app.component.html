@@ -31,10 +31,17 @@
   a:hover {
     color: #125699;
   }
-
+  .edit{
+    margin:11px 11px 0px 
+  }
+  grid-layout-wc{
+    height:calc(100% - 50px);
+  }
 </style>
+
 <div class="content" role="main">
-  <grid-layout-wc [layoutData]="layoutList" [edit]="true">
+  <button class="edit" (click)="onEdit($event)">edit</button>
+  <grid-layout-wc [layoutData]="layoutList" [edit]="isEdit" (close)="onClose($event)" (save)="onSave($event)">
     <app-chart01 slot="1"/>
     <app-chart02 slot="2"/>
     <app-chart03 slot="3"/>
