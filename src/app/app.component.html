@@ -34,18 +34,18 @@
   .edit{
     margin:11px 11px 0px 
   }
-  grid-layout-wc{
+  grid-layout-lit{
     height:calc(100% - 50px);
   }
 </style>
 
 <div class="content" role="main">
   <button class="edit" (click)="onEdit($event)">edit</button>
-  <grid-layout-wc [layoutData]="layoutList" [edit]="isEdit" (close)="onClose($event)" (save)="onSave($event)">
+  <grid-layout-lit [layoutData]="layoutList" [edit]="isEdit" (close)="onClose($event)" (save)="onSave($event)">
     <app-chart01 slot="1"/>
     <app-chart02 slot="2"/>
     <app-chart03 slot="3"/>
     <app-chart04 slot="4"/>
     <app-chart05 slot="5" />
-  </grid-layout-wc>
+  </grid-layout-lit>
 </div>
